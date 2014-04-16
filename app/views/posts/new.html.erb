@@ -1,6 +1,6 @@
 <h1>Nuevo post, Willy</h1>
 
-<%= form_for :post do |f| %>
+<%= form_for :post, url: posts_path do |f| %>
 	<p>
 		<%= f.label :title %><br>
 		<%= f.text_field :title %>
@@ -10,6 +10,6 @@
 		<%= f.text_area :text %>
 	</p>
 	<p>
-		<%= f.submit %>
+		<%= f.submit %> | <%= link_to "Volver a lista de posts", posts_path %>
 	</p>
 <% end %>
