@@ -1,6 +1,6 @@
 <h1>Nuevo post, Willy</h1>
 
-<%= form_for :post, url: posts_path do |f| %>
+<%= form_for :post, url: post_path(@post.id), method: :patch do |f| %>
     <% if @post.errors.any? %>
         <div id="errorExplanation">
             <strong>Estamos en la B, perrito</strong>
