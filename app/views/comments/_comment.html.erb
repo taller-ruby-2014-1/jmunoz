@@ -1,0 +1,14 @@
+<% if comment.commenter != nil %>
+<p>
+	<strong>Commenter: </strong>
+	<%= comment.commenter %>
+</p>
+<p>
+	<strong>Comment:</strong>
+	<%= comment.body %>
+</p>
+<p>
+	<%= link_to 'Eliminar comentario', [comment.post, comment],
+		method: :delete, data: {confirm: 'Seguro?'} %>
+</p>
+<% end %>

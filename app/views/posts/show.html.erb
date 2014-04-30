@@ -6,6 +6,14 @@
 	<strong>Text:</strong>
 	<%= @post.text %>
 </p>
+
+<h2>Comenta po shoro</h2>
+
+<%= render "comments/form" %>
+
+<h2>Comentarios</h2>
+<%= render @post.comments %>
+
 <p>
 <%= link_to "Volver a lista de posts", posts_path %>
 </p>
