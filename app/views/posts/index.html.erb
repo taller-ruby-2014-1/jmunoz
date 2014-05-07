@@ -1,6 +1,6 @@
 <h1>Lista de Posts, Willy</h1>
 
-<table>
+<table class="table table-striped table-bordered">
 <tr><th>Titulo</th><th>Texto</th><th>&nbsp;</th><th>&nbsp;</th>
 <th>&nbsp;</th></tr>
 <% @posts.each do |post| %>
@@ -12,7 +12,11 @@
 		<td><%= link_to "Eliminar Post", post_path(post), method: :delete, data: { confirm: '¿Está seguro de eliminar el post?' } %></td>
 	</tr>
 <% end %>
+<tfoot>
+<tr>
+<td colspan="5">
+	<%= link_to "Nuevo post", new_post_path, class: 'btn btn-primary btn-block' %>
+</td>
+</tr>
+</tfoot>
 </table>
-<p>
-	<%= link_to "Nuevo post", new_post_path %>
-</p>

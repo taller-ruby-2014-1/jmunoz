@@ -12,13 +12,13 @@
     <% end %>
 	<p>
 		<%= f.label :title %><br>
-		<%= f.text_field :title %>
+		<%= f.text_field :title, class: 'form-control' %>
 	</p>
 	<p>
 		<%= f.label :text %><br>
-		<%= f.text_area :text %>
+		<%= f.text_area :text, class:'form-control' %>
 	</p>
 	<p>
-		<%= f.submit %> | <%= link_to "Volver a lista de posts", posts_path %>
+		<%= f.submit class: 'btn btn-primary'  %> <%= link_to "Volver a lista de posts", posts_path, class: 'btn btn-default' %>
 	</p>
 <% end %>
