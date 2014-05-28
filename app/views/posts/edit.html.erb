@@ -2,7 +2,7 @@
 
 <%= form_for :post, url: post_path(@post.id), method: :patch do |f| %>
     <% if @post.errors.any? %>
-        <div id="errorExplanation">
+        <div id="alert alert-danger">
             <strong>Estamos en la B, perrito</strong>
             <ul>
                 <% @post.errors.full_messages.each do |msg| %>
@@ -12,13 +12,14 @@
     <% end %>
 	<p>
 		<%= f.label :title %><br>
-		<%= f.text_field :title %>
+		<%= f.text_field :title, class: 'form-control' %>
 	</p>
 	<p>
 		<%= f.label :text %><br>
-		<%= f.text_area :text %>
+		<%= f.text_area :text, class: 'form-control' %>
 	</p>
 	<p>
-		<%= f.submit %> | <%= link_to "Volver a lista de posts", posts_path %>
-	</p>
+<div class="btn-group">
+		<%= f.submit class: 'btn btn-primary' %><%= link_to "Volver a lista de posts", posts_path , class: 'btn btn-default' %>
+</div>
 <% end %>
